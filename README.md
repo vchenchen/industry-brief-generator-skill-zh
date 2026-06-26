@@ -1,6 +1,8 @@
 # Industry Brief Generator Skill
 
-一个面向 Codex 的通用行业快报生成器 Skill。
+一个面向 Codex 的通用行业快报生成器 Skill。输入任意细分行业和目标市场，它会先生成可筛选的候选选题池，再根据用户选择生成行业快报、海报和渠道文案。
+
+English edition: [industry-brief-generator-skill-en](https://github.com/vchenchen/industry-brief-generator-skill-en)
 
 它把行业快报拆成两个阶段：先生成有来源链接的候选选题池，再由用户选择最终编号，最后生成文字版快报、海报和渠道文案。
 
@@ -13,6 +15,18 @@
 - 支持内部简报、公众号、小红书、客户沟通等用途
 - 信息不足时不硬编、不凑数、不伪造来源
 - 海报生成后要求做视觉 QA，尤其检查中文断行和底部排版密度
+
+## Why Candidate-First
+
+行业快报最容易出问题的地方不是排版，而是选题质量。这个 Skill 把“收集候选”和“正式发布”拆开，避免模型直接替用户决定最终内容。
+
+适合需要人工判断的场景：
+
+- 市场情报日报
+- 海外行业热点追踪
+- 经销代理机会筛选
+- 内部经营简报
+- 小红书、公众号、客户沟通内容生产
 
 ## Demo
 
@@ -35,6 +49,18 @@ your-project/.agents/skills/industry-brief-generator/
 ```
 
 If the skill does not appear, restart Codex.
+
+## Quick Start
+
+```text
+使用 $industry-brief-generator，帮我生成一个行业快报候选池。
+
+输入具体行业：办公用品行业
+输入具体市场：全球
+输入重点关注内容：行业热点新闻、展会、新产品、经销代理机会
+输入排除内容：自媒体、企业软文
+输入最终用途：公司内部简报
+```
 
 ## Usage
 
@@ -92,6 +118,10 @@ The skill includes sample YAML configs for:
 - office supplies
 
 You can adapt these configs for any industry.
+
+## Release Notes
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## Good For
 
