@@ -30,7 +30,17 @@ English edition: [industry-brief-generator-skill-en](https://github.com/vchenche
 
 ## Demo
 
-![OfficeBiz Daily demo poster](docs/officebiz-demo-poster.png)
+### 办公用品行业
+
+![OfficeBiz Daily 办公用品行业快报海报](docs/officebiz-demo-poster.png)
+
+### 宠物行业
+
+![PetBiz Daily 宠物行业快报海报](docs/petbiz-demo-poster.png)
+
+### 健身行业
+
+![FitBiz Daily 健身行业快报海报](docs/fitbiz-demo-poster.png)
 
 ## Install
 
