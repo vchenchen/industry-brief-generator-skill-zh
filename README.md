@@ -47,7 +47,7 @@ English edition: [industry-brief-generator-skill-en](https://github.com/vchenche
 This repository uses the Codex repository-scope skill layout:
 
 ```text
-.agents/skills/industry-brief-generator/
+.agents/skills/industry-brief-generator-zh/
 ```
 
 Clone this repository and start Codex from the repository root. Codex should detect the skill automatically.
@@ -55,7 +55,7 @@ Clone this repository and start Codex from the repository root. Codex should det
 You can also copy this folder into your own project:
 
 ```text
-your-project/.agents/skills/industry-brief-generator/
+your-project/.agents/skills/industry-brief-generator-zh/
 ```
 
 If the skill does not appear, restart Codex.
@@ -63,7 +63,7 @@ If the skill does not appear, restart Codex.
 ## Quick Start
 
 ```text
-使用 $industry-brief-generator，帮我生成一个行业快报候选池。
+使用 $industry-brief-generator-zh，帮我生成一个行业快报候选池。
 
 输入具体行业：办公用品行业
 输入具体市场：全球
@@ -77,13 +77,13 @@ If the skill does not appear, restart Codex.
 Explicit invocation:
 
 ```text
-Use $industry-brief-generator to create a candidate-first overseas industry brief.
+Use $industry-brief-generator-zh to create a candidate-first overseas industry brief.
 ```
 
 Chinese prompt:
 
 ```text
-使用 $industry-brief-generator，帮我生成一个行业快报候选池。
+使用 $industry-brief-generator-zh，帮我生成一个行业快报候选池。
 ```
 
 Recommended input format:
@@ -157,7 +157,7 @@ If public information is insufficient, it should stop and ask for better sources
 ## Repository Structure
 
 ```text
-.agents/skills/industry-brief-generator/
+.agents/skills/industry-brief-generator-zh/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── references/
