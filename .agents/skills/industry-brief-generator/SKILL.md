@@ -1,5 +1,5 @@
 ---
-name: industry-brief-generator
+name: industry-brief-generator-zh
 description: Create reusable, candidate-first Chinese industry briefs for overseas markets. Use when the user wants an industry news briefing, daily/weekly industry digest, trend candidate pool, internal brief, Xiaohongshu/WeChat copy, or poster-style brief for any industry; especially when the user provides or should provide industry, target market, focus topics, excluded content, and final use. Also use when adapting the workflow to a new industry, creating an industry YAML config, or handling an unsupported/low-information industry without fabricating sources.
 ---
 
