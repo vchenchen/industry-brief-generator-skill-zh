@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.1 - README and Launch Assets
+
+- Reworked README positioning around the candidate-first workflow and trust-first rules.
+- Added a candidate-pool preview image for the GitHub landing page.
+- Added Chinese launch copy for Xiaohongshu, WeChat, LinkedIn, and GitHub.
+- Added plugin roadmap notes.
+
 ## v1.0.0 - Initial Chinese Release
 
 - Added the repository-scope Codex Skill at `.agents/skills/industry-brief-generator-zh/`.

@@ -1,46 +1,71 @@
 # Industry Brief Generator Skill
 
-一个面向 Codex 的通用行业快报生成器 Skill。输入任意细分行业和目标市场，它会先生成可筛选的候选选题池，再根据用户选择生成行业快报、海报和渠道文案。
+一个通用行业快报生成器。
+
+输入行业、市场、关注重点、排除内容和最终用途。它先生成 20 条有来源的候选选题；用户选出 8 条后，再生成最终简报、海报和渠道文案。
 
 English edition: [industry-brief-generator-skill-en](https://github.com/vchenchen/industry-brief-generator-skill-en)
 
-它把行业快报拆成两个阶段：先生成有来源链接的候选选题池，再由用户选择最终编号，最后生成文字版快报、海报和渠道文案。
+## Solves This Pain
+
+做行业快报最难的不是排版，而是每天找到靠谱选题。
+
+这个 Skill 把流程拆成两步：
+
+1. 先收集并筛选 20 条候选选题。
+2. 用户选出 8 条后，再生成最终快报、海报和文案。
+
+这样可以避免 AI 直接替你决定最终内容，也能减少软文、泛财经和弱相关信息混进快报。
+
+## Demo
+
+### 候选池预览
+
+![Candidate topic pool preview](docs/candidate-pool-preview.png)
+
+### 最终海报 Demo
+
+| 宠物行业｜北美｜小红书快报 | 办公用品｜全球｜内部简报 | 健身行业｜海外市场｜商业快报 |
+|---|---|---|
+| ![PetBiz Daily 宠物行业快报海报](docs/petbiz-demo-poster.png) | ![OfficeBiz Daily 办公用品行业快报海报](docs/officebiz-demo-poster.png) | ![FitBiz Daily 健身行业快报海报](docs/fitbiz-demo-poster.png) |
+
+推荐再测试的 Demo 场景：
+
+- 宠物行业｜北美｜小红书快报
+- 办公用品｜全球｜内部简报
+- 化工行业｜欧美｜价格、供需、扩产
 
 ## What It Does
 
 - 输入行业、市场、关注重点、排除内容和最终用途
-- 自动搜索海外行业新闻、展会、新品、并购、政策和趋势
+- 搜索海外行业新闻、展会、新品、并购、政策和趋势
 - 先输出 20 条候选选题
 - 用户选出 8 条后，再生成最终快报
 - 支持内部简报、公众号、小红书、客户沟通等用途
-- 信息不足时不硬编、不凑数、不伪造来源
-- 海报生成后要求做视觉 QA，尤其检查中文断行和底部排版密度
+- 生成海报后要求做视觉 QA，尤其检查中文断行和底部排版密度
 
-## Why Candidate-First
+## Trust-First Rules
 
-行业快报最容易出问题的地方不是排版，而是选题质量。这个 Skill 把“收集候选”和“正式发布”拆开，避免模型直接替用户决定最终内容。
+这个 Skill 的核心卖点不是“多写一点”，而是“不硬编”。
 
-适合需要人工判断的场景：
+它不会：
 
-- 市场情报日报
-- 海外行业热点追踪
-- 经销代理机会筛选
-- 内部经营简报
-- 小红书、公众号、客户沟通内容生产
+- 编造来源、日期、公司动作或链接
+- 把自媒体内容包装成行业事实
+- 用泛财经新闻凑数
+- 在用户选择 8 条前生成最终快报
 
-## Demo
+如果公开信息不足，它会停下来，请求更窄的行业边界、指定来源网站、公司名单，或允许使用较旧背景资料。
 
-### 办公用品行业
+## Good For
 
-![OfficeBiz Daily 办公用品行业快报海报](docs/officebiz-demo-poster.png)
-
-### 宠物行业
-
-![PetBiz Daily 宠物行业快报海报](docs/petbiz-demo-poster.png)
-
-### 健身行业
-
-![FitBiz Daily 健身行业快报海报](docs/fitbiz-demo-poster.png)
+- 咨询顾问
+- 市场研究团队
+- 出海企业
+- 内容运营
+- 行业媒体
+- 销售和 BD 团队
+- 经销代理和渠道拓展团队
 
 ## Install
 
@@ -52,10 +77,11 @@ This repository uses the Codex repository-scope skill layout:
 
 Clone this repository and start Codex from the repository root. Codex should detect the skill automatically.
 
-You can also copy this folder into your own project:
+You can also install it from GitHub:
 
-```text
-your-project/.agents/skills/industry-brief-generator-zh/
+```bash
+python3 /Users/vchen/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --url https://github.com/vchenchen/industry-brief-generator-skill-zh/tree/main/.agents/skills/industry-brief-generator-zh
 ```
 
 If the skill does not appear, restart Codex.
@@ -63,7 +89,7 @@ If the skill does not appear, restart Codex.
 ## Quick Start
 
 ```text
-使用 $industry-brief-generator-zh，帮我生成一个行业快报候选池。
+使用 $industry-brief-generator-zh。
 
 输入具体行业：办公用品行业
 输入具体市场：全球
@@ -72,21 +98,7 @@ If the skill does not appear, restart Codex.
 输入最终用途：公司内部简报
 ```
 
-## Usage
-
-Explicit invocation:
-
-```text
-Use $industry-brief-generator-zh to create a candidate-first overseas industry brief.
-```
-
-Chinese prompt:
-
-```text
-使用 $industry-brief-generator-zh，帮我生成一个行业快报候选池。
-```
-
-Recommended input format:
+## Input Format
 
 ```text
 输入具体行业：
@@ -96,29 +108,15 @@ Recommended input format:
 输入最终用途：如小红书/公众号/内部简报/客户沟通
 ```
 
-Example:
-
-```text
-输入具体行业：办公用品行业
-输入具体市场：全球
-输入重点关注内容：行业热点新闻、展会、新产品、经销代理机会
-输入排除内容：自媒体、企业软文
-输入最终用途：公司内部简报
-```
-
 ## Workflow
 
-1. Read or create an industry config.
-2. Search current sources and generate a candidate pool first.
-3. Wait for the user to choose exactly 8 item numbers.
-4. Generate the final brief and poster.
-5. Visually inspect the poster before delivery.
-
-The skill intentionally blocks final output until the user selects the final items.
+1. 读取或创建行业配置。
+2. 搜索当前来源，先生成候选池。
+3. 等待用户选择 8 个编号。
+4. 生成最终文字快报、海报和渠道文案。
+5. 实际查看海报，修复排版问题后再交付。
 
 ## Included Example Configs
-
-The skill includes sample YAML configs for:
 
 - fitness
 - chemical
@@ -127,32 +125,21 @@ The skill includes sample YAML configs for:
 - commercial real estate
 - office supplies
 
-You can adapt these configs for any industry.
+## Promotion Kit
 
-## Release Notes
+发布文案见：[docs/promotion-copy-zh.md](docs/promotion-copy-zh.md)
 
-See [CHANGELOG.md](CHANGELOG.md).
+建议发布渠道：
 
-## Good For
+- GitHub
+- 小红书/公众号
+- LinkedIn 英文版介绍
+- OpenAI/Codex 相关社区
+- 后续可考虑 Product Hunt 或 Hacker News
 
-- Market research teams
-- Consulting teams
-- Industry media operators
-- Overseas business development
-- Content teams
-- Internal strategy briefings
-- Export and distribution teams
+## Roadmap
 
-## Trust Rules
-
-The skill should not:
-
-- fabricate sources, dates, companies, or links
-- turn self-media posts into industry facts
-- include weakly related financial news just to fill the list
-- generate final posters before the user selects final items
-
-If public information is insufficient, it should stop and ask for better sources, company names, narrower industry boundaries, or permission to use older background materials.
+Skill 适合先发布验证。下一步可以升级为 Codex Plugin，让安装、图标、默认提示和 Demo 更像一个完整产品。
 
 ## Repository Structure
 
