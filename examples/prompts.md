@@ -3,7 +3,7 @@
 ## Office Supplies
 
 ```text
-使用 $industry-brief-generator-zh。
+使用 $industry-brief-generator-chinese。
 
 输入具体行业：办公用品行业
 输入具体市场：全球
@@ -15,7 +15,7 @@
 ## Pet Industry
 
 ```text
-使用 $industry-brief-generator-zh。
+使用 $industry-brief-generator-chinese。
 
 输入具体行业：宠物行业
 输入具体市场：北美
@@ -27,7 +27,7 @@
 ## Chemical Industry
 
 ```text
-使用 $industry-brief-generator-zh。
+使用 $industry-brief-generator-chinese。
 
 输入具体行业：化工行业
 输入具体市场：欧美
@@ -39,7 +39,7 @@
 ## When The Industry Is Too Broad
 
 ```text
-使用 $industry-brief-generator-zh。
+使用 $industry-brief-generator-chinese。
 
 输入具体行业：制造业
 输入具体市场：全球

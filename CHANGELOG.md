@@ -9,7 +9,7 @@
 
 ## v1.0.0 - Initial Chinese Release
 
-- Added the repository-scope Codex Skill at `.agents/skills/industry-brief-generator-zh/`.
+- Added the repository-scope Codex Skill at `.agents/skills/industry-brief-generator-chinese/`.
 - Added a candidate-first industry brief workflow.
 - Added Chinese templates for candidate pools, final briefs, poster output, and unsupported-industry handling.
 - Added sample configs for fitness, chemicals, pet industry, hotels, commercial real estate, and office supplies.
