@@ -125,22 +125,6 @@ If the skill does not appear, restart Codex.
 - commercial real estate
 - office supplies
 
-## Promotion Kit
-
-发布文案见：[docs/promotion-copy-zh.md](docs/promotion-copy-zh.md)
-
-建议发布渠道：
-
-- GitHub
-- 小红书/公众号
-- LinkedIn 英文版介绍
-- OpenAI/Codex 相关社区
-- 后续可考虑 Product Hunt 或 Hacker News
-
-## Roadmap
-
-Skill 适合先发布验证。下一步可以升级为 Codex Plugin，让安装、图标、默认提示和 Demo 更像一个完整产品。
-
 ## Repository Structure
 
 ```text
