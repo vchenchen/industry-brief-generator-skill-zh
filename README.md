@@ -4,7 +4,7 @@
 
 输入行业、市场、关注重点、排除内容和最终用途。它先生成 20 条有来源的候选选题；用户选出 8 条后，再生成最终简报、海报和渠道文案。
 
-English edition: [industry-brief-generator-skill-en](https://github.com/vchenchen/industry-brief-generator-skill-en)
+English edition: [industry-brief-generator-skill-english](https://github.com/vchenchen/industry-brief-generator-skill-english)
 
 ## Solves This Pain
 
@@ -81,7 +81,7 @@ You can also install it from GitHub:
 
 ```bash
 python3 /Users/vchen/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --url https://github.com/vchenchen/industry-brief-generator-skill-zh/tree/main/.agents/skills/industry-brief-generator-chinese
+  --url https://github.com/vchenchen/industry-brief-generator-skill-chinese/tree/main/.agents/skills/industry-brief-generator-chinese
 ```
 
 If the skill does not appear, restart Codex.

@@ -28,7 +28,7 @@
 - 办公用品｜全球｜内部简报
 - 化工行业｜欧美｜价格、供需、扩产
 
-GitHub: https://github.com/vchenchen/industry-brief-generator-skill-zh
+GitHub: https://github.com/vchenchen/industry-brief-generator-skill-chinese
 
 ## LinkedIn
 
@@ -38,7 +38,7 @@ It follows a candidate-first workflow: input an industry, market, focus topics, 
 
 The key design principle is trust: no fabricated sources, no fake dates, no soft copy repackaged as industry news.
 
-GitHub: https://github.com/vchenchen/industry-brief-generator-skill-zh
+GitHub: https://github.com/vchenchen/industry-brief-generator-skill-chinese
 
 ## GitHub Short Description
 
